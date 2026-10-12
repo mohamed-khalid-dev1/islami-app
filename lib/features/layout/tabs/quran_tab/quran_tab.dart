@@ -7,7 +7,6 @@ import 'package:islami_app/features/layout/tabs/quran_tab/widgets/most_recent_su
 import 'package:islami_app/features/layout/tabs/quran_tab/widgets/sura_card.dart';
 import 'package:islami_app/features/layout/tabs/quran_tab/widgets/sura_search_text_field.dart';
 import 'package:islami_app/models/sura.dart';
-
 import '../../../../core/cashing/cashing_keys.dart';
 
 class QuranTab extends StatefulWidget {
@@ -145,7 +144,7 @@ class _QuranTabState extends State<QuranTab> {
     searched = quran;
   }
 
-  getRecent() async {
+  Future<void> getRecent() async {
     recentSurasIndex =
         InitApp.sharedPreferences
             .getStringList(CashingKeys.getRecent)

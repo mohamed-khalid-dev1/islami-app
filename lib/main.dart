@@ -3,6 +3,7 @@ import 'package:islami_app/core/init_app.dart';
 import 'package:islami_app/core/theme/app_theme.dart';
 import 'package:islami_app/features/layout/home_screen.dart';
 import 'package:islami_app/features/layout/tabs/quran_tab/sura_details.dart';
+import 'package:islami_app/features/onbording/onboarding.dart';
 import 'package:islami_app/features/splash_screen/view/screen/splash_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.dark,
       routes: {
         SplashScreen.routName: (context) => SplashScreen(),
+        Onboarding.routeName: (context) => Onboarding(),
         HomeScreen.routName: (context) => HomeScreen(),
         SuraDetails.routName: (context) => SuraDetails(),
         HadethDetails.routName: (context) => HadethDetails(),
