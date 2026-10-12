@@ -1,7 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:islami_app/features/layout/home_screen.dart';
+import 'package:islami_app/core/init_app.dart';
+import 'package:islami_app/features/onbording/onboarding.dart';
+
+import '../../../layout/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String routName = "splash";
@@ -19,7 +22,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     timer = Timer(Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, HomeScreen.routName);
+      Navigator.pushReplacementNamed(
+        context,
+        InitApp.showOnboarding ? Onboarding.routeName : HomeScreen.routName,
+      );
     });
   }
 
